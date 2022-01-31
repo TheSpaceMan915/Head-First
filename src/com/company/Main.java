@@ -7,6 +7,8 @@ public class Main {
 
         Animal cat2 = new Cat("Barsik",3,"Naughty","White");
 
+        Animal cat3 = new Cat("Rijik","Bad","Orange");
+
         //polymorphism:
         //create an Animal reference and assign to it a Cat object
         Animal mycat = new Cat("Frousa",4,"Awesome","Grey");
@@ -23,7 +25,6 @@ public class Main {
             arr_animal.get(i).WalkAround();      //at the specified position in the list
 
         }
-
 
     }
 }
