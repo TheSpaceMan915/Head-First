@@ -1,10 +1,13 @@
-package com.company;
+package com.inheritance_example;
 
 public class Cat extends Feline implements Pet
 {
     private String m_colour;
 
-    public Cat(){}
+    public Cat()
+    {
+        this("noname",0,"Fine","");
+    }
 
     public Cat(String name,int size,String behavior,String colour)
     {
@@ -14,14 +17,12 @@ public class Cat extends Feline implements Pet
 
     public Cat(String name,String behavior,String colour)
     {
-        super(name,behavior);
-        m_colour = colour;
+        this(name,0,behavior,colour);
     }
 
     public Cat(String name,String behavior, int size, String colour)
     {
-        super(behavior,name,size);
-        m_colour = colour;
+        this(name,size,behavior,colour);
     }
 
     public void WalkAround()

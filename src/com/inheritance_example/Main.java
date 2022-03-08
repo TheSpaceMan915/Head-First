@@ -1,4 +1,4 @@
-package com.company;
+package com.inheritance_example;
 import java.util.ArrayList;
 
 public class Main {
@@ -18,13 +18,16 @@ public class Main {
         arr_animal.add(mycat);       //polymorphism:
                                     //add a Cat object in an Animal ArrayList
         arr_animal.add(cat2);
-
+        /*
         for (int i = 0; i < arr_animal.size();i++)
         {
             arr_animal.get(i).Print();           //get(index) returns the element
             arr_animal.get(i).WalkAround();      //at the specified position in the list
 
         }
+*/
 
+        double x = Math.random() * 5;
+        System.out.println(x);
     }
 }

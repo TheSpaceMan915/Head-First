@@ -1,4 +1,4 @@
-package com.company;
+package com.inheritance_example;
 
 public interface Pet {
     void BeFriendly();
