@@ -8,8 +8,9 @@ public class MyDrawingPanel extends JPanel
 {
     public void paintComponent(Graphics obj)
     {
-        obj.fillRect(0,0,this.getWidth(),this.getHeight());    //make the background of the window black
-        Graphics2D obj2D = (Graphics2D) obj;    //x1,y1 - this is where the 1st color starts
+
+     obj.fillRect(0,0,this.getWidth(),this.getHeight());    //make the background of the window black
+     Graphics2D obj2D = (Graphics2D) obj;    //x1,y1 - this is where the 1st color starts
                                                 //x2,y2 - this is where the 2nd color starts
 
         Random rand = new Random();
