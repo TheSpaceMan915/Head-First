@@ -10,7 +10,7 @@ public class Graphics_Class {
     public class LabelListener implements ActionListener {
 
         public void actionPerformed(ActionEvent obj) {
-            m_label.setText("Check out this beautiful oval");
+
         }
     }
 
@@ -18,6 +18,7 @@ public class Graphics_Class {
 
         public void actionPerformed(ActionEvent obj)      //this is an event-handling method
         {
+            m_label.setText("Check out this");
             m_frame.repaint();
         }
     }
@@ -65,20 +66,19 @@ public class Graphics_Class {
 
     public void PaintScreen() {
         m_frame = new JFrame();
+        JTextField field = new JTextField("Write something");
         JButton button = new JButton("Hey there!");
-        JButton button_label_control = new JButton("Change the text on the label");
         m_label = new JLabel("How's life?");
         m_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         m_frame.setSize(600, 600);
 
         m_frame.getContentPane().add(BorderLayout.SOUTH, button);
-        m_frame.getContentPane().add(BorderLayout.NORTH, button_label_control);
-        m_frame.getContentPane().add(BorderLayout.EAST, m_label);
+        m_frame.getContentPane().add(BorderLayout.NORTH, m_label);
         MyDrawingPanel panel = new MyDrawingPanel();
         m_frame.getContentPane().add(BorderLayout.CENTER, panel);
+        panel.add(field,FlowLayout.LEFT);
 
         button.addActionListener(new ButtonListener());
-        button_label_control.addActionListener(new LabelListener());
         m_frame.setVisible(true);
     }
 
