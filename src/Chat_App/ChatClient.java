@@ -53,5 +53,7 @@ public class ChatClient {
 
     public PrintWriter getWriter() { return m_writer; }
 
+    public static void main(String[] args) {
 
+    }
 }

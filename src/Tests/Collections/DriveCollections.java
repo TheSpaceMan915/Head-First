@@ -5,7 +5,7 @@ import java.util.*;
 public class DriveCollections {
 
     public static void countNumbers(List<? extends Number> list)
-    { list.forEach(number -> System.out.println(number)); }
+    { list.forEach(System.out::println); }
 
 
     public static void main(String[] args)
@@ -52,6 +52,5 @@ public class DriveCollections {
         list_ints.add(453);
         list_ints.add(70);
         countNumbers(list_ints);
-
     }
 }

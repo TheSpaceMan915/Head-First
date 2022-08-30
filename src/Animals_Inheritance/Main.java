@@ -3,9 +3,9 @@ import java.util.*;
 
 public class Main {
 
-    public static void func(List<Animal> arr)
+    public static void func(List<? extends Animal> list_animals)
     {
-
+        list_animals.forEach(animal -> animal.Print() );
     }
     public static void main(String[] args) {
 
@@ -31,7 +31,10 @@ public class Main {
         }
 */
 
-        ArrayList<Cat> arr_cats = new ArrayList<>();
-        func(arr_animals);
+        ArrayList<Animal> arr_cats = new ArrayList<>();
+        Cat cat4 = new Cat();
+        arr_cats.add(cat4);
+
+        func(arr_cats);
     }
 }
