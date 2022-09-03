@@ -52,7 +52,7 @@ public class ArraysAndStrings
         if (str1.length() != str2.length())
         { return false; }
 
-        Hashtable<Character,Integer> table = new Hashtable<>();
+        Map<Character,Integer> table = new Hashtable<>();
 
         for (int i = 0; i < str1.length(); i++)
         {
@@ -92,6 +92,8 @@ public class ArraysAndStrings
 
     //task 1.2  Version №2
     //Time complexity: O(n * logn)
+    //Should've sorted the chars arrays, create two strings out of those arrays and
+    //compare the strings
     public static boolean isPermutationV2(String str1, String str2)
     {
         if (str1.length() != str2.length())
@@ -121,6 +123,36 @@ public class ArraysAndStrings
         return true;
     }
 
+    //task 1.3 Version №1
+    public static String replaceSpaces(String s)
+    {
+        int space_counter = 0;
+
+        for (int i=0; i < s.length(); i++)
+        {
+            if (s.charAt(i) == ' ')
+            { space_counter++; }
+        }
+
+        final int size = (s.length() - space_counter) + (3 * space_counter);
+        char[] chars_arr = new char[size];
+
+        int j = 0;
+        for (int k = 0; k < s.length(); k++)
+        {
+            if (s.charAt(k) == ' ')
+            {
+                chars_arr[j++] = '%';
+                chars_arr[j++] = '2';
+                chars_arr[j++] = '0';
+            }
+            else
+            { chars_arr[j++] = s.charAt(k); }
+        }
+
+        return new String(chars_arr);
+    }
+
     public static void main(String args[])
     {
         String test_str1 = "abc";
@@ -130,6 +162,8 @@ public class ArraysAndStrings
 
         System.out.println(test1);
 
-
+        String test_str3 = "England is a nice country";
+        String res_str = replaceSpaces(test_str3);
+        System.out.println(res_str);
     }
 }
